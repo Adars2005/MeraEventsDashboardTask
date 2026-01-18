@@ -33,6 +33,8 @@ export async function POST(req: NextRequest) {
                 description: body.description,
                 date: new Date(body.date),
                 capacity: body.capacity,
+                category: body.category,
+                location: body.location,
             },
         });
 

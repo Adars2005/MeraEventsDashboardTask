@@ -18,6 +18,8 @@ export const metadata: Metadata = {
 };
 
 import Providers from "@/components/providers";
+import { Header } from "@/components/header";
+import { Toaster } from "@/components/ui/sonner";
 
 export default function RootLayout({
   children,
@@ -29,7 +31,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+          {children}
+          <Toaster />
+        </Providers>
       </body>
     </html>
   );

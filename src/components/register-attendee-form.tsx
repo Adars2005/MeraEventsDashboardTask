@@ -24,6 +24,7 @@ export function RegisterAttendeeForm({ eventId, onSuccess }: { eventId: string, 
         defaultValues: {
             name: '',
             email: '',
+            phone: '',
         },
     });
 
@@ -77,6 +78,19 @@ export function RegisterAttendeeForm({ eventId, onSuccess }: { eventId: string, 
                             <FormLabel>Email Address</FormLabel>
                             <FormControl>
                                 <Input placeholder="john@example.com" type="email" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Phone Number</FormLabel>
+                            <FormControl>
+                                <Input placeholder="+1234567890" type="tel" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>

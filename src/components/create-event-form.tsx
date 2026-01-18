@@ -27,6 +27,8 @@ export function CreateEventForm({ onSuccess }: { onSuccess?: () => void }) {
             description: '',
             date: '',
             capacity: 0,
+            category: 'General',
+            location: '',
         },
     });
 
@@ -89,6 +91,32 @@ export function CreateEventForm({ onSuccess }: { onSuccess?: () => void }) {
                             <FormLabel>Date</FormLabel>
                             <FormControl>
                                 <Input type="datetime-local" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="category"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Category</FormLabel>
+                            <FormControl>
+                                <Input placeholder="e.g., Conference, Workshop, Meetup" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="location"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Location</FormLabel>
+                            <FormControl>
+                                <Input placeholder="Event location" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
