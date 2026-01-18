@@ -30,7 +30,11 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+<<<<<<< HEAD
 # env files (can opt-in for committing if needed)
+=======
+
+>>>>>>> 9c64d1b9ae31be6c9ce896d5f0736ca67179576a
 
 # vercel
 .vercel
